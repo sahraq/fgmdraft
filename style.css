@@ -1,0 +1,164 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(27, 27, 32); /* Dark background */
+    font-family: 'Poppins', sans-serif; /* Updated font */
+    color: #black; /* Fixed to white for readability */
+    line-height: 1.7;
+    display: grid;
+    place-content: center;
+    min-height: 100vh; /* Changed to min-height */
+    padding: 20px; /* Add some padding around the content */
+}
+
+header {
+    background: linear-gradient(135deg, #6F4C3E 0%, #F2E5D5 100%); /* Warm gradient */
+    color: #fff;
+    padding: 60px 0; /* Increased padding for a spacious look */
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for elegance */
+    border-radius: 20px; /* Rounded corners for the header */
+}
+
+.container {
+    margin: 2em; /* Consistent margin for layout */
+    max-width: 800px; /* Sleeker width for focus */
+    padding: 30px; /* Less padding for a tighter layout */
+    display: flex; /* Use flex for layout */
+    flex-direction: column; /* Ensure elements stack vertically */
+    gap: 1.5em; /* Increased space between cards */
+    background-color: #ffffff; /* Light background for contrast */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Elegant shadow */
+    border-radius: 20px; /* More pronounced rounded corners */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px; /* Subtle rounding */
+    margin-bottom: 25px; /* Consistent spacing */
+}
+
+h1 {
+    color: #5B3F2A; /* Richer color for emphasis */
+    font-size: 3.5em; /* Enhanced size for prominence */
+    margin-bottom: 20px; /* Increased space below */
+    font-weight: 700; /* Strong emphasis */
+}
+
+h2 {
+    color: #5B3F2A; /* Matching color scheme */
+    border-bottom: 3px solid #F2E5D5; /* Stylish border for emphasis */
+    padding-bottom: 10px;
+    margin: 30px 0 20px; /* Balanced spacing */
+    font-size: 2.5em; /* Improved size for hierarchy */
+}
+
+p {
+    text-align: left;
+    margin-bottom: 25px; /* More spacing */
+    line-height: 1.8;
+    font-size: 1.2em; /* Slightly larger text */
+}
+
+a {
+    color: rgb(0, 99, 228); /* Link color */
+    font-size: 1.3rem; /* Adjusted font size */
+    text-decoration: none;
+    margin-top: 1em;
+    display: inline-block;
+    font-weight: bold;
+    padding: .5em 1em; /* Adjusted padding for better appearance */
+    position: relative;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:before,
+a:after {
+    position: absolute;
+    content: '';
+    border-bottom: 3px solid rgb(0, 99, 228);
+    border-radius: 1em;
+    bottom: .3em;
+    transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+a:before {
+    width: 1em;
+    transform-origin: left;
+}
+
+a:after {
+    width: 82%;
+    left: 1em;
+    transform: translateX(110%);
+}
+
+a:hover {
+    color: rgb(0, 99, 228); /* Change text color on hover */
+}
+
+a:hover:before {
+    transform: scaleX(0.3);
+}
+
+a:hover:after {
+    transform: translateX(0);
+}
+
+.button-container {
+    text-align: center; /* Center the button */
+    margin-top: 25px; /* Consistent margin */
+}
+
+button {
+    padding: 14px 28px; /* Comfortable padding */
+    font-size: 16px; /* Slightly smaller for sleekness */
+    cursor: pointer;
+    background-color: #6F4C3E; /* Harmonious button color */
+    color: #fff;
+    border: none;
+    border-radius: 25px; /* Modern rounded edges */
+    transition: background-color 0.3s ease, transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #8B6B59; /* Softer hover color */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0; /* Balanced footer padding */
+    background-color: #F2E5D5; /* Soft footer color */
+    color: #6F4C3E; /* Change to match theme */
+    border-top: 3px solid #6F4C3E; /* Stylish border for emphasis */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; /* Reduced for mobile */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Scaled down for mobile */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Scaled down for mobile */
+    }
+
+    button {
+        width: 100%; /* Full-width on mobile */
+        padding: 12px; /* Adjusted for mobile comfort */
+    }
+}
